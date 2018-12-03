@@ -1,0 +1,240 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.project3.controller.MasterPage1" xmlns="sap.m">
+    <Page title="Projects" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://capital-projects" iconColor="Positive" text="Project" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Button text="Add" type="Default" icon="sap-icon://capital-projects" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Text text="Text about Project" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Project 1" number="1,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
+                                        <attributes>
+                                            <ObjectAttribute text="Customer" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="end date" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Project 2" number="2,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Customer" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="end date" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Project 3" number="3,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Customer" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="end date" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://employee" iconColor="Positive" text="Employee" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Button text="Add" type="Default" icon="sap-icon://employee" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Text text="Text about Employee" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Function" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Function" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Function" active="false" visible="true"/>
+                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://role" iconColor="Positive" text="Role" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Button text="Add" type="Default" icon="sap-icon://role" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Text text="Text about Role" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Role 1" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute title="" text="Description" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Role 2" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Description" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Role 3" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Description" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://customer-briefing" iconColor="Positive" text="Criteria" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="false" iconDensityAware="false">
+                        <content>
+                            <Button text="Add" type="Default" icon="sap-icon://customer-briefing" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Text text="Text about criteria" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Criteria 1" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Criteria Name" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Criteria 2" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Criteria Name" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="Intro." title="Criteria 3" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Criteria Name" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://overview-chart" iconColor="Positive" text="Report" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Button text="Add Evaluation" type="Default" icon="sap-icon://overview-chart" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Text text="Text about chart" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar/>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem intro="Intro." title="Firstname Lastname" number="1,000" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Project Name" active="false" visible="true"/>
+                                            <ObjectAttribute text="Criteria" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="end date" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Button text="Project" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Employee" type="Default" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>
