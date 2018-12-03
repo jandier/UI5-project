@@ -1,0 +1,174 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.project3",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"ach": "ach",
+		"resources": "resources.json",
+		"dataSources": {},
+		"sourceTemplate": {
+			"id": "sap.ui.ui5-template-plugin.2masterdetail",
+			"version": "1.32.5"
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://detail-view",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "com.sap.build.standard.project3.view.App",
+			"type": "XML",
+			"async": false,
+			"id": "app"
+		},
+		"autoPrefixId": true,
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.project3.view",
+				"controlId": "idAppControl",
+				"clearTarget": false,
+				"controlAggregation": "detailPages",
+				"async": false,
+				"bypassed": {
+					"target": [
+						"DetailProject",
+						"MasterPage"
+					]
+				}
+			},
+			"targets": {
+				"MasterPage": {
+					"controlAggregation": "masterPages",
+					"viewName": "MasterPage",
+					"viewId": "MasterPage",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetailProject": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetailProject",
+					"viewId": "DetailProject",
+					"viewLevel": 5,
+					"transition": "slide"
+				},
+				"DetailEmployee": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetailEmployee",
+					"viewId": "DetailEmployee",
+					"viewLevel": 4,
+					"transition": "slide"
+				},
+				"DetailRole": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetailRole",
+					"viewId": "DetailRole",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"DetailReport": {
+					"controlAggregation": "detailPages",
+					"viewName": "DetailReport",
+					"viewId": "DetailReport",
+					"viewLevel": 3,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "MasterPage",
+					"name": "MasterPage",
+					"target": [
+						"DetailProject",
+						"MasterPage"
+					]
+				},
+				{
+					"pattern": "MasterPage/DetailProject",
+					"name": "DetailProject",
+					"target": [
+						"MasterPage",
+						"DetailProject"
+					]
+				},
+				{
+					"pattern": "MasterPage/DetailEmployee",
+					"name": "DetailEmployee",
+					"target": [
+						"MasterPage",
+						"DetailEmployee"
+					]
+				},
+				{
+					"pattern": "MasterPage/DetailRole",
+					"name": "DetailRole",
+					"target": [
+						"MasterPage",
+						"DetailRole"
+					]
+				},
+				{
+					"pattern": "MasterPage/DetailReport",
+					"name": "DetailReport",
+					"target": [
+						"MasterPage",
+						"DetailReport"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"DetailProject",
+						"MasterPage"
+					]
+				}
+			]
+		}
+	}
+}
