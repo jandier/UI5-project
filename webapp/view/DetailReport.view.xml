@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.project3.controller.DetailReport" xmlns="sap.m" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <Page title="Report" showHeader="true" showFooter="true" showNavButton="false" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <ObjectHeader intro="" title="Employeenaam" icon="sap-icon://vertical-bar-chart" number="" numberUnit="" numberState="None" titleActive="false" backgroundDesign="Translucent" condensed="false" visible="true">
+                <attributes/>
+                <statuses/>
+                <markers/>
+            </ObjectHeader>
+            <Text text="Projectnaam" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiMediumMargin"/>
+            <chart:Chart id="sap_IconTabBar_Page_0-zihzmhk4t25xs336tb6m5jpw3_S3-m4vku79518mibul6zuclpap04_S4-4zyw24a851ybvi14fhxl2ssx5_S5-content-sap_chart_ColumnChart-1543840504545" width="100%" height="450px" visibleDimensions="__id" visibleMeasures="mea0" chartType="column" selectionMode="Single" uiConfig="{}" vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+                <chart:dimensions>
+                    <data:Dimension name="__id" label="Criteria" role="category" textProperty="dim0"/>
+                </chart:dimensions>
+                <chart:measures>
+                    <data:Measure name="mea0" label="Score" role="axis2"/>
+                </chart:measures>
+            </chart:Chart>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>

@@ -1,0 +1,46 @@
+{
+    "dataBinding": {
+        "/webapp/view/MasterPage.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailProject.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailEmployee.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailRole.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailReport.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/AddEmployee.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Dialog8.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/EditRole.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/EditEmployee.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/EditProject.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/NewRole.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/NewEvaluation.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/NewProject.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/NewEmployee.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}
