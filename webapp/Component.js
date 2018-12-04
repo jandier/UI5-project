@@ -36,7 +36,7 @@ sap.ui.define([
 			// set application model
 			var oApplicationModel = new sap.ui.model.json.JSONModel({});
 			this.setModel(oApplicationModel, "applicationModel");
-
+			
 			// call the base component's init function and create the App view
 			UIComponent.prototype.init.apply(this, arguments);
 
