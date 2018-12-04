@@ -8,7 +8,7 @@
             </ObjectHeader>
             <Button text="Edit" type="Default" icon="sap-icon://edit" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress"/>
             <Button text="Delete" type="Default" icon="sap-icon://delete" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress1"/>
-            <form:Form width="898.6749877929688px" editable="true" visible="true" class="sapUiMediumMargin">
+            <form:Form  width="898.6749877929688px" editable="true" visible="true" class="sapUiMediumMargin">
                 <form:title>
                     <core:Title text="Employee details" level="Auto"/>
                 </form:title>
