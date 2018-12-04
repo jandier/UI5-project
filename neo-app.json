@@ -26,7 +26,7 @@
         "type": "destination",
         "name": "SAPGateway"
       },
-      "description": "EhB SAP Gateway (E.B.)"
+      "description": "Ehb SAP Gateway (J.D.)"
     }
   ],
   "authenticationMethod": "none",

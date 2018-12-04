@@ -1,9 +1,12 @@
+/*eslint-disable no-console, no-alert*/
+/*global history*/
 sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/m/MessageBox",
 	"./EditEmployee",
 	"./utilities",
+	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/routing/History"
-], function(BaseController, MessageBox, EditEmployee, Utilities, History) {
+], function(BaseController, MessageBox, EditEmployee, Utilities, History, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("com.sap.build.standard.project3.controller.DetailEmployee", {
@@ -88,6 +91,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		onInit: function() {
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("DetailEmployee").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
+			
+			
 			var oView = this.getView();
 			oView.addEventDelegate({
 				onBeforeShow: function() {
