@@ -1,9 +1,13 @@
+/*eslint-disable no-console, no-alert*/
+/*global history*/
+
 sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/m/MessageBox",
 	"./EditProject", "./AddEmployee",
 	"./utilities",
+	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/routing/History"
-], function(BaseController, MessageBox, EditProject, AddEmployee, Utilities, History) {
+], function(BaseController, MessageBox, EditProject, AddEmployee, Utilities, History, JSONModel) {
 	"use strict";
 
 	return BaseController.extend("com.sap.build.standard.project3.controller.DetailProject", {
@@ -43,6 +47,8 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			}
 
 		},
+		
+		
 		_onButtonPress: function() {
 
 			var sDialogName = "EditProject";
@@ -59,12 +65,16 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oDialog.open();
 
 		},
-		_onButtonPress1: function(oEvent) {
+		_onButtonPress1: function() {
+				var oModel = new JSONModel();
+				console.log(oModel);
+				oModel.read("ProjectSet", {
+				success: function(oRetrievedResult) { console.log(oRetrievedResult) },
+				error: function(oError) { /* do something */ }
+				});
+				return 1;
 
-			var oSource = oEvent.getSource();
-			var oSourceBindingContext = oSource.getBindingContext();
-
-			return new Promise(function(fnResolve, fnReject) {
+			/*return new Promise(function(fnResolve, fnReject) {
 				if (oSourceBindingContext) {
 					var oModel = oSourceBindingContext.getModel();
 					oModel.remove(oSourceBindingContext.getPath(), {
@@ -82,7 +92,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				if (err !== undefined) {
 					MessageBox.error(err.message);
 				}
-			});
+			});*/
 
 		},
 		_onButtonPress2: function() {
