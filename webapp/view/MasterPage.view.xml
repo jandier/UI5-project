@@ -25,14 +25,14 @@
                                 <items>
                                     <ObjectListItem intro="" title="{Titel}" icon="sap-icon://capital-projects" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress4">
                                         <attributes>
-                                            <ObjectAttribute title="" text="Customer" active="false" visible="true"/>
-                                            <ObjectAttribute text="Location" active="false" visible="true"/>
+                                            <ObjectAttribute title="{Customer}" text="{Klant}" active="false" visible="true"/>
+                                            <ObjectAttribute title="{Location}" text="{Locatie}" active="false" visible="true"/>
                                         </attributes>
                                         <firstStatus>
-                                            <ObjectStatus text="start date" state="None" visible="true"/>
+                                            <ObjectStatus text="{Startdatum}" state="None" visible="true"/>
                                         </firstStatus>
                                         <secondStatus>
-                                            <ObjectStatus text="end date" state="None" visible="true"/>
+                                            <ObjectStatus text="{Einddatum}" state="None" visible="true"/>
                                         </secondStatus>
                                     </ObjectListItem>
                                 </items>
@@ -62,8 +62,8 @@
                                 <items>
                                     <ObjectListItem intro="" title="{Voornaam} {Achternaam}" icon="sap-icon://employee" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
                                         <attributes>
-                                            <ObjectAttribute title="Id" text="projectlid_id" active="false" visible="true"/>
-                                            <ObjectAttribute title="Function" text="function" active="false" visible="true"/>
+                                            <ObjectAttribute title="Id" text="{ProjectlidId}" active="false" visible="true"/>
+                                            <ObjectAttribute title="Function" text="{Functie}" active="false" visible="true"/>
                                         </attributes>
                                         <firstStatus/>
                                         <secondStatus/>
@@ -76,7 +76,14 @@
                     <IconTabFilter icon="sap-icon://role" iconColor="Positive" text="Roles" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Button text="Add role" type="Default" icon="sap-icon://role" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress2"/>
-                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress6">
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress6"
+                            id="list2"
+                			items="{
+                			path: '/RolSet',
+                			sorter: {
+                			path: 'Naam',
+                			descending: false},
+                			groupHeaderFactory: '.createGroupHeader'}">
                                 <infoToolbar/>
                                 <headerToolbar>
                                     <Toolbar enabled="true" visible="true" width="" design="Solid">
@@ -86,55 +93,14 @@
                                     </Toolbar>
                                 </headerToolbar>
                                 <items>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                    <ObjectListItem intro="" title="{Naam}" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
                                         <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
+                                            <ObjectAttribute title="Id" text="{RolId}" active="false" visible="true"/>
                                         </attributes>
                                         <firstStatus/>
                                         <secondStatus/>
                                     </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Rolename" icon="sap-icon://role" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Id" text="rol_id" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
+                                    
                                 </items>
                             </List>
                         </content>
@@ -143,7 +109,14 @@
                     <IconTabFilter icon="sap-icon://overview-chart" iconColor="Positive" text="Reports" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
                         <content>
                             <Button text="New evaluation" type="Default" icon="sap-icon://overview-chart" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress3"/>
-                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress7">
+                            <List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress7"
+                            id="list3"
+                			items="{
+                			path: '/RapportSet',
+                			sorter: {
+                			path: 'ProjectlidId',
+                			descending: false},
+                			groupHeaderFactory: '.createGroupHeader'}">
                                 <infoToolbar/>
                                 <headerToolbar>
                                     <Toolbar enabled="true" visible="true" width="" design="Solid">
@@ -153,62 +126,14 @@
                                     </Toolbar>
                                 </headerToolbar>
                                 <items>
-                                    <ObjectListItem intro="" title="Firstname Lastname" icon="sap-icon://overview-chart" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                                    <ObjectListItem intro="" title="{ProjectlidId}" icon="sap-icon://overview-chart" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
                                         <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
+                                            <ObjectAttribute title="{ProjectId}" text="Project Name" active="false" visible="true"/>
                                         </attributes>
                                         <firstStatus/>
                                         <secondStatus/>
                                     </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Firstname Lastname" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute title="Project" text="Project Name" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus/>
-                                        <secondStatus/>
-                                    </ObjectListItem>
+                                   
                                 </items>
                             </List>
                         </content>
