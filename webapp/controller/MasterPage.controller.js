@@ -7,6 +7,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	"use strict";
 
 	return BaseController.extend("com.sap.build.standard.project3.controller.MasterPage", {
+		//onInit functie
+		//this.getOwnerComponent().getRouter().getRoute
+		onAfterRendering:function(){
+			var oModel = this.getView().getModel();
+			oModel = oModel;
+		},
 		handleRouteMatched: function(oEvent) {
 			var sAppId = "App5bfbee02a519720ccef17e57";
 
